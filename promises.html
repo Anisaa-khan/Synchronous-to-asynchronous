@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- =====PROMISES===== -->
+<!-- Promises are used to handle asynchronous operations.They are more powerfull mechanism than callbacks to handle
+ asynchronous tasks....they always end up with success or failure. -->
+    <script>
+const fetchedData = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const success=true;
+        if(success){
+resolve("Fetched successfully");
+        }else{
+            reject("Erorr::fetching Failed");
+        }
+    }, 2000);
+});
+
+console.log("Before fetching..........")
+fetchedData
+.then((result) =>{
+console.log(result);
+})
+.catch((err)=>{
+    console.log(err);
+});
+console.log("after fetching..........");
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const fetchdata=(callback)=>{
+    setTimeout(() =>{
+        console.log("data fetched successfuly");
+        callback();
+    },2000);
+}
+console.log("before fetching data");
+fetchdata(() =>{
+console.log("call back...")
+})
+console.log("After fetching data");
+
+
+
+
+    </script>
+</body>
+</html>
